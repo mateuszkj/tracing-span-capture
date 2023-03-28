@@ -11,9 +11,10 @@ type Storage = Arc<Mutex<Vec<EventLog>>>;
 
 static GLOBAL_DATA: Lazy<Mutex<HashMap<Id, Storage>>> = Lazy::new(Default::default);
 
-pub struct TracingSpanRecorder;
+/// Layer for tracing_subscriber
+pub struct TracingSpanCaptureLayer;
 
-impl<S> Layer<S> for TracingSpanRecorder
+impl<S> Layer<S> for TracingSpanCaptureLayer
 where
     S: tracing::Subscriber + for<'a> tracing_subscriber::registry::LookupSpan<'a>,
 {
