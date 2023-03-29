@@ -1,9 +1,15 @@
 [package]
 name = "tracing-span-capture"
 version = "0.0.1"
+authors = ["Mateusz Kondej <m@kondej.net>"]
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+rust-version = "1.56"
+license = "MIT OR Apache-2.0"
+description = "Capture and record logs for tracing span id"
+documentation = "https://docs.rs/tracing-span-capture"
+repository = "https://gitlab.com/mateuszkj/tracing-span-capture"
+keywords = ["tracing", "logging", "log", "test"]
+categories = ["development-tools::testing"]
 
 [dependencies]
 tracing = "0.1"
